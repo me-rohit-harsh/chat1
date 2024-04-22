@@ -1,9 +1,7 @@
 // 1. Import packages
-import express from "express";
-import http from "http";
-import {
-    Server
-} from "socket.io";
+const express = require('express');
+const http = require('http');
+const Server = require('socket.io');
 
 // 2. Create Instances & Make Server
 const app = express();
@@ -18,7 +16,7 @@ io.on("connection", (socket) => {
     console.log("User Connected Successfully ✅");
 
     socket.on("chat message", (msg) => {
-         console.log(msg);
+        console.log(msg);
         io.emit("chat message", msg);
 
     });
