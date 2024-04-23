@@ -1,7 +1,9 @@
 // 1. Import packages
-const express = require('express');
-const http = require('http');
-const Server = require('socket.io');
+import express from "express";
+import http from "http";
+import {
+    Server
+} from "socket.io";
 
 // 2. Create Instances & Make Server
 const app = express();
